@@ -1,0 +1,8 @@
+C:\Users\usar\Desktop\project\C#\Software\testcs\bin\Debug\testcs.exe.config
+C:\Users\usar\Desktop\project\C#\Software\testcs\bin\Debug\testcs.exe
+C:\Users\usar\Desktop\project\C#\Software\testcs\bin\Debug\testcs.pdb
+C:\Users\usar\Desktop\project\C#\Software\testcs\obj\Debug\testcs.csproj.AssemblyReference.cache
+C:\Users\usar\Desktop\project\C#\Software\testcs\obj\Debug\testcs.csproj.SuggestedBindingRedirects.cache
+C:\Users\usar\Desktop\project\C#\Software\testcs\obj\Debug\testcs.csproj.CoreCompileInputs.cache
+C:\Users\usar\Desktop\project\C#\Software\testcs\obj\Debug\testcs.exe
+C:\Users\usar\Desktop\project\C#\Software\testcs\obj\Debug\testcs.pdb
