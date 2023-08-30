@@ -1,0 +1,21 @@
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\test.exe.config
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\test.exe
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\test.pdb
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\GoogleMaps.LocationServices.dll
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\Newtonsoft.Json.dll
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\Newtonsoft.Json.xml
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\prototype.csproj.AssemblyReference.cache
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\test.Form1.resources
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\test.Properties.Resources.resources
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\prototype.csproj.GenerateResource.cache
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\prototype.csproj.CoreCompileInputs.cache
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\prototype.csproj.CopyComplete
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\test.exe
+C:\Users\usar\Desktop\project\groupwork\prototype\obj\Debug\test.pdb
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\Database.mdf
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\Database_log.ldf
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\CaraTex Framework Buttons.dll
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\CaraTexFramework.dll
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\CaraTex Framework Buttons.pdb
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\CaraTex Framework Buttons.xml
+C:\Users\usar\Desktop\project\groupwork\prototype\bin\Debug\CaraTexFramework.pdb
