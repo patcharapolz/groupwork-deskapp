@@ -35,10 +35,10 @@ namespace WindowsFormsApp1
 
             try
             {
-                xlapp = new Microsoft.Office.Interop.Excel.Application();
-                xlworkbook = xlapp.Workbooks.Open(fileaddr);
-                xlworksheet = xlworkbook.Worksheets["Sheet1"];
-                xlrange = xlworksheet.UsedRange;
+                //xlapp = new Microsoft.Office.Interop.Excel.Application();
+                //xlworkbook = xlapp.Workbooks.Open(fileaddr);
+                //xlworksheet = xlworkbook.Worksheets["Sheet1"];
+                //xlrange = xlworksheet.UsedRange;
 
                 data.ColumnCount = xlrange.Columns.Count;
                 int i = 0;

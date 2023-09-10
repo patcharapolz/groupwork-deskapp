@@ -45,7 +45,7 @@
             "เขต",
             "แขวง",
             "ถนน"});
-            this.dataname_list.Location = new System.Drawing.Point(120, 51);
+            this.dataname_list.Location = new System.Drawing.Point(107, 50);
             this.dataname_list.Name = "dataname_list";
             this.dataname_list.Size = new System.Drawing.Size(184, 24);
             this.dataname_list.TabIndex = 0;

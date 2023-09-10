@@ -41,11 +41,11 @@
             this.close_btn = new FontAwesome.Sharp.IconPictureBox();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
             this.status_icon = new FontAwesome.Sharp.IconPictureBox();
             this.submit_btn = new System.Windows.Forms.Button();
             this.redeem_box = new System.Windows.Forms.TextBox();
             this.code_lb = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_box)).BeginInit();
             this.title.SuspendLayout();
@@ -53,8 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimize_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -189,10 +189,10 @@
             this.minimize_btn.IconChar = FontAwesome.Sharp.IconChar.Minus;
             this.minimize_btn.IconColor = System.Drawing.Color.Gainsboro;
             this.minimize_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.minimize_btn.IconSize = 23;
-            this.minimize_btn.Location = new System.Drawing.Point(608, 3);
+            this.minimize_btn.IconSize = 25;
+            this.minimize_btn.Location = new System.Drawing.Point(605, 9);
             this.minimize_btn.Name = "minimize_btn";
-            this.minimize_btn.Size = new System.Drawing.Size(23, 27);
+            this.minimize_btn.Size = new System.Drawing.Size(25, 25);
             this.minimize_btn.TabIndex = 0;
             this.minimize_btn.TabStop = false;
             this.minimize_btn.Click += new System.EventHandler(this.minimize_btn_Click);
@@ -204,10 +204,10 @@
             this.close_btn.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.close_btn.IconColor = System.Drawing.Color.Gainsboro;
             this.close_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.close_btn.IconSize = 23;
-            this.close_btn.Location = new System.Drawing.Point(637, 3);
+            this.close_btn.IconSize = 25;
+            this.close_btn.Location = new System.Drawing.Point(636, 9);
             this.close_btn.Name = "close_btn";
-            this.close_btn.Size = new System.Drawing.Size(23, 27);
+            this.close_btn.Size = new System.Drawing.Size(25, 25);
             this.close_btn.TabIndex = 0;
             this.close_btn.TabStop = false;
             this.close_btn.Click += new System.EventHandler(this.close_btn_Click_1);
@@ -235,6 +235,17 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(664, 400);
             this.panelDesktop.TabIndex = 6;
+            // 
+            // logo
+            // 
+            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(664, 400);
+            this.logo.TabIndex = 6;
+            this.logo.TabStop = false;
+            this.logo.Click += new System.EventHandler(this.logo_box_Click);
             // 
             // status_icon
             // 
@@ -282,17 +293,6 @@
             this.code_lb.Text = "Redeem Key";
             this.code_lb.Visible = false;
             // 
-            // logo
-            // 
-            this.logo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 0);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(664, 400);
-            this.logo.TabIndex = 6;
-            this.logo.TabStop = false;
-            this.logo.Click += new System.EventHandler(this.logo_box_Click);
-            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,8 +316,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.status_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.status_icon)).EndInit();
             this.ResumeLayout(false);
 
         }

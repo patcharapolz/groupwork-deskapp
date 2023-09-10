@@ -30,17 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pathfile_box = new System.Windows.Forms.TextBox();
-            this.import = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.input_box = new System.Windows.Forms.TextBox();
+            this.browse_btn = new FontAwesome.Sharp.IconPictureBox();
+            this.load_btn = new FontAwesome.Sharp.IconPictureBox();
+            this.tbData = new System.Windows.Forms.TextBox();
             this.Analysis = new FontAwesome.Sharp.IconButton();
             this.lat_box = new System.Windows.Forms.TextBox();
             this.lon_box = new System.Windows.Forms.TextBox();
             this.latitude = new System.Windows.Forms.Label();
             this.longitude = new System.Windows.Forms.Label();
             this.reset_btn = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.import)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.dgvData = new System.Windows.Forms.DataGridView();
+            this.text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.key = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.browse_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,40 +66,42 @@
             this.pathfile_box.Size = new System.Drawing.Size(339, 22);
             this.pathfile_box.TabIndex = 1;
             // 
-            // import
+            // browse_btn
             // 
-            this.import.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
-            this.import.ForeColor = System.Drawing.Color.Gainsboro;
-            this.import.IconChar = FontAwesome.Sharp.IconChar.FileImport;
-            this.import.IconColor = System.Drawing.Color.Gainsboro;
-            this.import.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.import.Location = new System.Drawing.Point(395, 12);
-            this.import.Name = "import";
-            this.import.Size = new System.Drawing.Size(32, 32);
-            this.import.TabIndex = 2;
-            this.import.TabStop = false;
+            this.browse_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
+            this.browse_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.browse_btn.IconChar = FontAwesome.Sharp.IconChar.FileImport;
+            this.browse_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.browse_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.browse_btn.Location = new System.Drawing.Point(395, 12);
+            this.browse_btn.Name = "browse_btn";
+            this.browse_btn.Size = new System.Drawing.Size(32, 32);
+            this.browse_btn.TabIndex = 2;
+            this.browse_btn.TabStop = false;
+            this.browse_btn.Click += new System.EventHandler(this.browse_btn_Click);
             // 
-            // iconPictureBox1
+            // load_btn
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(433, 12);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox1.TabIndex = 2;
-            this.iconPictureBox1.TabStop = false;
+            this.load_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
+            this.load_btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.load_btn.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.load_btn.IconColor = System.Drawing.Color.Gainsboro;
+            this.load_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.load_btn.Location = new System.Drawing.Point(433, 12);
+            this.load_btn.Name = "load_btn";
+            this.load_btn.Size = new System.Drawing.Size(32, 32);
+            this.load_btn.TabIndex = 2;
+            this.load_btn.TabStop = false;
+            this.load_btn.Click += new System.EventHandler(this.load_btn_Click);
             // 
-            // input_box
+            // tbData
             // 
-            this.input_box.Location = new System.Drawing.Point(15, 53);
-            this.input_box.Multiline = true;
-            this.input_box.Name = "input_box";
-            this.input_box.ReadOnly = true;
-            this.input_box.Size = new System.Drawing.Size(450, 335);
-            this.input_box.TabIndex = 1;
+            this.tbData.Location = new System.Drawing.Point(15, 53);
+            this.tbData.Multiline = true;
+            this.tbData.Name = "tbData";
+            this.tbData.ReadOnly = true;
+            this.tbData.Size = new System.Drawing.Size(216, 335);
+            this.tbData.TabIndex = 1;
             // 
             // Analysis
             // 
@@ -113,6 +120,7 @@
             this.Analysis.Text = "Analysis";
             this.Analysis.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Analysis.UseVisualStyleBackColor = true;
+            this.Analysis.Click += new System.EventHandler(this.Analysis_Click);
             // 
             // lat_box
             // 
@@ -168,6 +176,45 @@
             this.reset_btn.Text = "Reset";
             this.reset_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.reset_btn.UseVisualStyleBackColor = true;
+            this.reset_btn.Click += new System.EventHandler(this.reset_btn_Click);
+            // 
+            // dgvData
+            // 
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.text,
+            this.key,
+            this.lon});
+            this.dgvData.Location = new System.Drawing.Point(241, 53);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.RowHeadersWidth = 51;
+            this.dgvData.RowTemplate.Height = 24;
+            this.dgvData.Size = new System.Drawing.Size(240, 335);
+            this.dgvData.TabIndex = 6;
+            // 
+            // text
+            // 
+            this.text.HeaderText = "Text";
+            this.text.MinimumWidth = 6;
+            this.text.Name = "text";
+            this.text.ReadOnly = true;
+            this.text.Width = 125;
+            // 
+            // key
+            // 
+            this.key.HeaderText = "key";
+            this.key.MinimumWidth = 6;
+            this.key.Name = "key";
+            this.key.ReadOnly = true;
+            this.key.Width = 125;
+            // 
+            // lon
+            // 
+            this.lon.HeaderText = "Longtitude";
+            this.lon.MinimumWidth = 6;
+            this.lon.Name = "lon";
+            this.lon.ReadOnly = true;
+            this.lon.Width = 125;
             // 
             // FormExtractor
             // 
@@ -175,13 +222,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(664, 400);
+            this.Controls.Add(this.dgvData);
             this.Controls.Add(this.reset_btn);
             this.Controls.Add(this.lon_box);
             this.Controls.Add(this.lat_box);
             this.Controls.Add(this.Analysis);
-            this.Controls.Add(this.iconPictureBox1);
-            this.Controls.Add(this.import);
-            this.Controls.Add(this.input_box);
+            this.Controls.Add(this.load_btn);
+            this.Controls.Add(this.browse_btn);
+            this.Controls.Add(this.tbData);
             this.Controls.Add(this.pathfile_box);
             this.Controls.Add(this.longitude);
             this.Controls.Add(this.latitude);
@@ -189,8 +237,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormExtractor";
             this.Text = "Extractor";
-            ((System.ComponentModel.ISupportInitialize)(this.import)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.browse_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,14 +249,18 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox pathfile_box;
-        private FontAwesome.Sharp.IconPictureBox import;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.TextBox input_box;
+        private FontAwesome.Sharp.IconPictureBox browse_btn;
+        private FontAwesome.Sharp.IconPictureBox load_btn;
+        private System.Windows.Forms.TextBox tbData;
         private FontAwesome.Sharp.IconButton Analysis;
         private System.Windows.Forms.TextBox lat_box;
         private System.Windows.Forms.TextBox lon_box;
         private System.Windows.Forms.Label latitude;
         private System.Windows.Forms.Label longitude;
         private FontAwesome.Sharp.IconButton reset_btn;
+        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn text;
+        private System.Windows.Forms.DataGridViewTextBoxColumn key;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lon;
     }
 }

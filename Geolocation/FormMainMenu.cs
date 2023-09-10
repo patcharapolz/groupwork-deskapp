@@ -130,6 +130,7 @@ namespace WindowsFormsApp1
         private void help_btn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new FormHelp());
         }
 
         private void extractor_btn_Click(object sender, EventArgs e)

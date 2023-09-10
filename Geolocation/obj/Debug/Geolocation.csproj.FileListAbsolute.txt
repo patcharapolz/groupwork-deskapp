@@ -85,3 +85,4 @@ C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.CopyComplete
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.exe
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.FormHelp.resources
