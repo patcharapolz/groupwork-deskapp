@@ -129,7 +129,6 @@
             this.lat_box.ReadOnly = true;
             this.lat_box.Size = new System.Drawing.Size(144, 22);
             this.lat_box.TabIndex = 4;
-            this.lat_box.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lon_box
             // 
@@ -138,7 +137,6 @@
             this.lon_box.ReadOnly = true;
             this.lon_box.Size = new System.Drawing.Size(144, 22);
             this.lon_box.TabIndex = 4;
-            this.lon_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // latitude
             // 

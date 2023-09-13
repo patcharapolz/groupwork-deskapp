@@ -75,10 +75,8 @@ C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\System.Runtime.Com
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.AssemblyReference.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.SuggestedBindingRedirects.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.exe.config
-C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.FormConfig.resources
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.FormMainMenu.resources
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.Forms.FormExtractor.resources
-C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.FormRedeem.resources
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.GenerateResource.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.CoreCompileInputs.cache

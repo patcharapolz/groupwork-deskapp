@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.logo_box = new System.Windows.Forms.PictureBox();
-            this.config_btn = new FontAwesome.Sharp.IconButton();
             this.extractor_btn = new FontAwesome.Sharp.IconButton();
             this.help_btn = new FontAwesome.Sharp.IconButton();
             this.title = new System.Windows.Forms.Panel();
@@ -42,10 +41,6 @@
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.logo = new System.Windows.Forms.PictureBox();
-            this.status_icon = new FontAwesome.Sharp.IconPictureBox();
-            this.submit_btn = new System.Windows.Forms.Button();
-            this.redeem_box = new System.Windows.Forms.TextBox();
-            this.code_lb = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo_box)).BeginInit();
             this.title.SuspendLayout();
@@ -54,7 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -62,7 +56,6 @@
             this.panelMenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panelMenu.Controls.Add(this.logo_box);
-            this.panelMenu.Controls.Add(this.config_btn);
             this.panelMenu.Controls.Add(this.extractor_btn);
             this.panelMenu.Controls.Add(this.help_btn);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -81,27 +74,6 @@
             this.logo_box.TabIndex = 6;
             this.logo_box.TabStop = false;
             this.logo_box.Click += new System.EventHandler(this.logo_box_Click);
-            // 
-            // config_btn
-            // 
-            this.config_btn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.config_btn.FlatAppearance.BorderSize = 0;
-            this.config_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.config_btn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.config_btn.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.config_btn.IconColor = System.Drawing.Color.White;
-            this.config_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.config_btn.IconSize = 32;
-            this.config_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.config_btn.Location = new System.Drawing.Point(0, 327);
-            this.config_btn.Name = "config_btn";
-            this.config_btn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.config_btn.Size = new System.Drawing.Size(136, 41);
-            this.config_btn.TabIndex = 5;
-            this.config_btn.Text = "Config";
-            this.config_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.config_btn.UseVisualStyleBackColor = true;
-            this.config_btn.Click += new System.EventHandler(this.config_btn_Click);
             // 
             // extractor_btn
             // 
@@ -226,10 +198,6 @@
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
             this.panelDesktop.Controls.Add(this.logo);
-            this.panelDesktop.Controls.Add(this.status_icon);
-            this.panelDesktop.Controls.Add(this.submit_btn);
-            this.panelDesktop.Controls.Add(this.redeem_box);
-            this.panelDesktop.Controls.Add(this.code_lb);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(136, 50);
             this.panelDesktop.Name = "panelDesktop";
@@ -246,52 +214,6 @@
             this.logo.TabIndex = 6;
             this.logo.TabStop = false;
             this.logo.Click += new System.EventHandler(this.logo_box_Click);
-            // 
-            // status_icon
-            // 
-            this.status_icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
-            this.status_icon.ForeColor = System.Drawing.Color.Gainsboro;
-            this.status_icon.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.status_icon.IconColor = System.Drawing.Color.Gainsboro;
-            this.status_icon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.status_icon.IconSize = 37;
-            this.status_icon.Location = new System.Drawing.Point(131, 205);
-            this.status_icon.Name = "status_icon";
-            this.status_icon.Size = new System.Drawing.Size(41, 37);
-            this.status_icon.TabIndex = 7;
-            this.status_icon.TabStop = false;
-            this.status_icon.Visible = false;
-            // 
-            // submit_btn
-            // 
-            this.submit_btn.Location = new System.Drawing.Point(449, 205);
-            this.submit_btn.Name = "submit_btn";
-            this.submit_btn.Size = new System.Drawing.Size(85, 37);
-            this.submit_btn.TabIndex = 6;
-            this.submit_btn.Text = "Submit";
-            this.submit_btn.UseVisualStyleBackColor = true;
-            this.submit_btn.Visible = false;
-            this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
-            // 
-            // redeem_box
-            // 
-            this.redeem_box.Location = new System.Drawing.Point(188, 212);
-            this.redeem_box.Name = "redeem_box";
-            this.redeem_box.Size = new System.Drawing.Size(236, 22);
-            this.redeem_box.TabIndex = 5;
-            this.redeem_box.Visible = false;
-            // 
-            // code_lb
-            // 
-            this.code_lb.AutoSize = true;
-            this.code_lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.code_lb.ForeColor = System.Drawing.Color.Gainsboro;
-            this.code_lb.Location = new System.Drawing.Point(197, 158);
-            this.code_lb.Name = "code_lb";
-            this.code_lb.Size = new System.Drawing.Size(170, 31);
-            this.code_lb.TabIndex = 4;
-            this.code_lb.Text = "Redeem Key";
-            this.code_lb.Visible = false;
             // 
             // FormMainMenu
             // 
@@ -315,9 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimize_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).EndInit();
             this.panelDesktop.ResumeLayout(false);
-            this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.status_icon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,15 +249,10 @@
         private FontAwesome.Sharp.IconButton extractor_btn;
         private FontAwesome.Sharp.IconPictureBox minimize_btn;
         private FontAwesome.Sharp.IconPictureBox close_btn;
-        private FontAwesome.Sharp.IconButton config_btn;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelDesktop;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Label lblTitleChildForm;
-        private FontAwesome.Sharp.IconPictureBox status_icon;
-        private System.Windows.Forms.Button submit_btn;
-        private System.Windows.Forms.TextBox redeem_box;
-        private System.Windows.Forms.Label code_lb;
         private System.Windows.Forms.PictureBox logo_box;
         private System.Windows.Forms.PictureBox logo;
     }

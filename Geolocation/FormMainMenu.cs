@@ -18,8 +18,6 @@ namespace WindowsFormsApp1
     {
 
         //Fields
-        bool admin = false;
-        string key = "guadmin";
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
@@ -139,37 +137,10 @@ namespace WindowsFormsApp1
             OpenChildForm(new FormExtractor());
         }
 
-        private void config_btn_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            if(admin)
-            { 
-                OpenChildForm(new FormConfig());
-            }
-            else
-            {
-                if (currentChildForm != null)
-                {
-                    currentChildForm.Close();
-                }
-                Reset();
-                status_icon.Visible = true;
-                redeem_box.Visible = true;
-                code_lb.Visible = true;
-                submit_btn.Visible = true;
-                logo.Visible = false;
-                lblTitleChildForm.Text = "Home";
-                iconCurrentChildForm.IconChar = IconChar.Key;
-                iconCurrentChildForm.IconColor = Color.Gold;
-            }
-        }
+        
         private void Reset()
         {
             DisableButton();
-            status_icon.Visible = false;
-            redeem_box.Visible = false;
-            code_lb.Visible = false;
-            submit_btn.Visible = false;
             leftBorderBtn.Visible = false;
             logo.Visible = true;
             iconCurrentChildForm.IconChar = IconChar.Home;
@@ -177,24 +148,6 @@ namespace WindowsFormsApp1
             lblTitleChildForm.Text = "Home";
         }
 
-
-        private void submit_btn_Click(object sender, EventArgs e)
-        {
-            if (redeem_box.Text == key)
-            {
-                status_icon.IconChar = FontAwesome.Sharp.IconChar.Check;
-                status_icon.IconColor = Color.Green;
-                admin = true;
-                ActivateButton(config_btn, RGBColors.color3);
-                OpenChildForm(new FormConfig());
-            }
-
-            else
-            {
-                status_icon.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-                status_icon.IconColor = Color.Red;
-            }
-        }
 
         private void logo_box_Click(object sender, EventArgs e)
         {

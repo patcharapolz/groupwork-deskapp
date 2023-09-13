@@ -11,6 +11,8 @@ using Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 using System.Windows.Controls;
 using DocumentFormat.OpenXml.Spreadsheet;
+using System.IO;
+using System.Reflection;
 
 namespace WindowsFormsApp1.Forms
 {
@@ -20,22 +22,12 @@ namespace WindowsFormsApp1.Forms
         Microsoft.Office.Interop.Excel.Workbook xlworkbook;
         Microsoft.Office.Interop.Excel.Worksheet xlworksheet;
         Microsoft.Office.Interop.Excel.Range xlrange;
-        public string alltext = "";
         public List<string> all = new List<string>();
-
+        public string getpath = (System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location)).Replace("\\bin\\Debug",""); 
         public FormExtractor()
         {
             InitializeComponent();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void browse_btn_Click(object sender, EventArgs e)
@@ -81,11 +73,12 @@ namespace WindowsFormsApp1.Forms
                 
                 iLineNo++;
             }
+            
         }
 
         private void Analysis_Click(object sender, EventArgs e)
         {
-            string filepath = $"C:\\Users\\usar\\Desktop\\project\\groupwork\\Geolocation\\data\\test.xlsx";
+            string filepath = $"{getpath}\\Database\\จังหวัด.xlsx";
             string[] strArrColumn = new string[3];
             int idx = 0;
             xlapp = new Microsoft.Office.Interop.Excel.Application();
@@ -93,24 +86,16 @@ namespace WindowsFormsApp1.Forms
             xlworksheet = xlworkbook.Worksheets["Sheet1"];
             xlrange = xlworksheet.UsedRange;
             int range = xlrange.Rows.Count;
-            //int index = dgvData.Rows.Add(idx);
-            //DataGridViewRow row = dgvData.Rows[index];
             for (int i = 1; i<=xlrange.Rows.Count; i++) 
             {
                 idx = 0;
                 string key = xlworksheet.Cells[i, 1].Value.ToString();
-                //string text = dgvData.Rows[i].Cells[0].Value.ToString();
-                //dgvData.Rows.Add(all[i-1]);
                 for (idx=0;idx<(iLineNo-1);idx++)
                 { 
                     if (all[idx].Contains(key))
                     {
-                        alltext = all[idx];
-                        dgvData.Rows[dgvData.Rows.Add(all[idx])].Cells[1].Value = alltext;
-                    }
-                    else
-                    {
-                        alltext = "NULL";
+                        dgvData.Rows[dgvData.Rows.Add(all[idx])].Cells[1].Value = key;
+                        all[idx] = all[idx].Replace(key, "");
                     }
                 }
 
@@ -123,7 +108,11 @@ namespace WindowsFormsApp1.Forms
         private void reset_btn_Click(object sender, EventArgs e)
         {
             dgvData.Rows.Clear();
-            dgvData.Refresh();
+           dgvData.Refresh();
+            tbData.Clear();
+            pathfile_box.Clear();
+            all.Clear();
+
         }
     }
     

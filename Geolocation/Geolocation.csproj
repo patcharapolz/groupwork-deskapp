@@ -168,12 +168,6 @@
     <Compile Include="FormHelp.Designer.cs">
       <DependentUpon>FormHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormConfig.Designer.cs">
-      <DependentUpon>FormConfig.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,17 +180,8 @@
     <Compile Include="FormExtractor.Designer.cs">
       <DependentUpon>FormExtractor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRedeem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormRedeem.Designer.cs">
-      <DependentUpon>FormRedeem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormConfig.resx">
-      <DependentUpon>FormConfig.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormHelp.resx">
       <DependentUpon>FormHelp.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,9 +190,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormExtractor.resx">
       <DependentUpon>FormExtractor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRedeem.resx">
-      <DependentUpon>FormRedeem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
