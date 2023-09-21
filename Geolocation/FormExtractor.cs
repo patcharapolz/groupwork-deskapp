@@ -73,30 +73,64 @@ namespace WindowsFormsApp1.Forms
                 
                 iLineNo++;
             }
-            
+            //MessageBox.Show(all.Count.ToString());
         }
 
         private void Analysis_Click(object sender, EventArgs e)
         {
-            string filepath = $"{getpath}\\Database\\จังหวัด.xlsx";
-            string[] strArrColumn = new string[3];
+            //string filepath = $"{getpath}\\data\\test.xlsx";
+            string filepath = $"{getpath}\\Database\\รวม.xlsx";
+            List<string> key_contain = new List<string>();
+            string contain = "", text_contain = "";
             int idx = 0;
+            int countIdx = 0;
             xlapp = new Microsoft.Office.Interop.Excel.Application();
             xlworkbook = xlapp.Workbooks.Open(filepath);
             xlworksheet = xlworkbook.Worksheets["Sheet1"];
             xlrange = xlworksheet.UsedRange;
             int range = xlrange.Rows.Count;
-            for (int i = 1; i<=xlrange.Rows.Count; i++) 
+            MessageBox.Show(xlrange.Count.ToString());
+            for (idx = 0; idx < (iLineNo - 1); idx++) 
             {
-                idx = 0;
-                string key = xlworksheet.Cells[i, 1].Value.ToString();
-                for (idx=0;idx<(iLineNo-1);idx++)
-                { 
-                    if (all[idx].Contains(key))
+               
+                if (countIdx == (all.Count))
+                {
+                    MessageBox.Show("Stop");
+                    break;
+                }
+                for (int idxRow = 1; idxRow<=xlrange.Rows.Count; idxRow++)
+                {
+                    contain = "";
+                    text_contain = "";
+                    key_contain.Clear();
+   
+
+                    for (int idxCol = 1; idxCol<= xlrange.Columns.Count; idxCol++)
                     {
-                        dgvData.Rows[dgvData.Rows.Add(all[idx])].Cells[1].Value = key;
-                        all[idx] = all[idx].Replace(key, "");
+
+                        string key = xlworksheet.Cells[idxRow, idxCol].Value.ToString();
+                        //MessageBox.Show($"Text = {all[idx]} Key = {key}");
+                        textBox1.Text = all[idx];
+                        textBox2.Text = key;
+                        if (key == "NULL")
+                        {
+                            break;
+                        }
+                        if (all[idx].Contains(key))
+                        {
+                            text_contain = all[idx];
+                            key_contain.Add(key);
+                            all[idx] = all[idx].Replace(key, "");
+                        }
                     }
+                    if (text_contain != "")
+                    {
+                        countIdx++;
+                        contain = String.Join(",", key_contain);
+                        dgvData.Rows[dgvData.Rows.Add(text_contain)].Cells[1].Value = contain;
+                    }
+
+
                 }
 
 
@@ -108,7 +142,7 @@ namespace WindowsFormsApp1.Forms
         private void reset_btn_Click(object sender, EventArgs e)
         {
             dgvData.Rows.Clear();
-           dgvData.Refresh();
+            dgvData.Refresh();
             tbData.Clear();
             pathfile_box.Clear();
             all.Clear();

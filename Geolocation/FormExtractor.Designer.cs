@@ -40,6 +40,8 @@
             this.key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.browse_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -149,7 +151,7 @@
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(497, 335);
+            this.dgvData.Size = new System.Drawing.Size(497, 242);
             this.dgvData.TabIndex = 6;
             // 
             // text
@@ -183,12 +185,28 @@
             this.lon.ReadOnly = true;
             this.lon.Width = 125;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(155, 318);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(383, 22);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(155, 366);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(383, 22);
+            this.textBox2.TabIndex = 7;
+            // 
             // FormExtractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(7)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(664, 400);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.reset_btn);
             this.Controls.Add(this.Analysis);
@@ -222,5 +240,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn key;
         private System.Windows.Forms.DataGridViewTextBoxColumn lat;
         private System.Windows.Forms.DataGridViewTextBoxColumn lon;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
