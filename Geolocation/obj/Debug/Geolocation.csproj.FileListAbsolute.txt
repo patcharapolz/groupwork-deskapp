@@ -60,8 +60,6 @@ C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\System.Memory.dll
 C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\XLParser.dll
-C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\CaraTex Framework Buttons.pdb
-C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\CaraTex Framework Buttons.xml
 C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\ClosedXML.xml
 C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\ExcelNumberFormat.xml
@@ -75,12 +73,10 @@ C:\Users\usar\Desktop\project\groupwork\Geolocation\bin\Debug\System.Runtime.Com
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.AssemblyReference.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.SuggestedBindingRedirects.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.exe.config
-C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.FormMainMenu.resources
-C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.Forms.FormExtractor.resources
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.GenerateResource.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.CoreCompileInputs.cache
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\Geolocation.csproj.CopyComplete
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.exe
 C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.pdb
-C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.FormHelp.resources
+C:\Users\usar\Desktop\project\groupwork\Geolocation\obj\Debug\WindowsFormsApp1.Forms.Geolocation.resources
