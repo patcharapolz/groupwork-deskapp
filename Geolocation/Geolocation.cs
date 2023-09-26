@@ -16,8 +16,11 @@ using System.Reflection;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using System.Runtime.InteropServices;
 
+
+
 namespace WindowsFormsApp1.Forms
 {
+
     public partial class Geolocation : Form
     {
         Microsoft.Office.Interop.Excel.Application xlapp;
@@ -34,6 +37,7 @@ namespace WindowsFormsApp1.Forms
         public Geolocation()
         {
             InitializeComponent();
+
         }
 
         private void import_btn_Click(object sender, EventArgs e)
@@ -84,21 +88,23 @@ namespace WindowsFormsApp1.Forms
                     string key = xlworksheet.Cells[idxRow, 1].Value.ToString();
                     if (all[count].Contains(key))
                     {
+                        xlworkbook.Close(true);
+                        xlapp.Quit();
                         return key;
                     }
                 }
-                xlworkbook.Close();
+                
+                
+                xlworkbook.Close(0);
                 xlapp.Quit();
-                return "NULL";
+                return "";
             } catch (COMException ce)
             {
-                if ((uint)ce.ErrorCode == 0x80010108)
-                {
-                    xlworkbook.Close();
-                    xlapp.Quit();
-                }
-                return "NULL";
+                xlworkbook.Close(0);
+                xlapp.Quit();
+                return "";
             }
+            
         }
 
         private void Analysis_Click(object sender, EventArgs e)
@@ -107,6 +113,7 @@ namespace WindowsFormsApp1.Forms
             string province = "", road = "", district = "", subdistrict = "";
             string province_path = $"{getpath}\\data\\จังหวัด.xlsx";
             string road_path = $"{getpath}\\data\\ถนน.xlsx";
+            List<string> item = new List<string>();
             for (int idx = 0; idx < (iLineNo - 1); idx++)
             {
                 path = get_info(province_path, idx);
@@ -120,7 +127,11 @@ namespace WindowsFormsApp1.Forms
                 subdistrict = get_info(subdistrict_path, idx);
 
                 contain = $"{province}, {road}, {district}, {subdistrict}";
+                item.Add(contain);
+                item.Add(idx.ToString());
                 dgvData.Rows[dgvData.Rows.Add(all[idx])].Cells[1].Value = contain;
+                dgvData.Rows[idx].Cells[2].Value = getLat(contain);
+                dgvData.Rows[idx].Cells[3].Value = getLon(contain);
             }
         }
 
@@ -174,6 +185,55 @@ namespace WindowsFormsApp1.Forms
             import_btn.Location = new System.Drawing.Point(473, 45);
             Analysis.Location = new System.Drawing.Point(584, 45);
             reset_btn.Location = new System.Drawing.Point(695, 45);
+        }
+
+        public string getLat(string addr)
+        {
+            latlon address = new latlon();
+            address.Addr = addr;
+            try
+            {
+                object latitude = PythonInterop.RunPythonCodeAndReturn(
+    @"from geopy.geocoders import Nominatim
+locator = Nominatim(user_agent=""Geoloation"");
+location = locator.geocode(address.Addr);
+address.Lat = location.latitude;
+latitude = address.Lat", address, "address", "latitude");
+
+                string lat = latitude.ToString();
+                return lat;
+            }
+            catch
+            {
+                return "";
+            }
+        }
+        public string getLon(string addr)
+        {
+            latlon address = new latlon();
+            address.Addr = addr;
+            try
+            {
+                object longitude = PythonInterop.RunPythonCodeAndReturn(
+    @"from geopy.geocoders import Nominatim
+locator = Nominatim(user_agent=""Geoloation"");
+location = locator.geocode(address.Addr);
+address.Lon = location.longitude;
+longitude = address.Lon", address, "address", "longitude");
+                
+                string lon = longitude.ToString();
+                return lon;
+            }
+            catch
+            {
+                return "";
+            }
+        }
+        public class latlon
+        {
+            public string Addr { get; set; }
+            public float Lat { get; set; }
+            public float Lon { get; set; }
         }
     }
     
